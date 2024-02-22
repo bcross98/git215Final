@@ -32,6 +32,10 @@
         </nav>
     </header>
     <main>
+
+        <!--This div is where the snow comes from-->
+        <div id="snowBlower"></div>
+
         <img src="Media/swiss-valley.jpg" alt="Image of the Swiss Valley" class="hero">
 
         <!--STUFF GOES HERE-->
@@ -41,7 +45,7 @@
                     <p>Please reach out to us with any questions or concerns. We are happy to help you plan your dream vacation with us!</p>
                 <img src="Media/swiss-peak.jpg" alt="Image of the Swiss Peak" onmouseenter="ovrImg(this);" onmouseleave="outImg(this);">
             </section>
-            <form action="#" method="POST" target="_blank">
+            <form action="#" method="POST" target="_blank" id="myForm">
                 <div class="labelWrapper"><label for="fullname">Full Name:*</label></div>
                 <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
                 <hr>
