@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Brandon Cross">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Basilisk</title>
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!--CSS & FAVICON-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Media/favicon.ico" type="image/x-icon">
+
+    <!--Script and Jquery link to easily fade in on page load & Grayscale images-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div id="titleWrap"><a href="#"><h1>The Basilisk</h1></a></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#accom">Accommodations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <img src="Media/swiss-valley.jpg" alt="Image of the Swiss Valley" class="hero">
+        
+        <div id="indexMain">
+            <section id="intro">
+                <h2>Relax, Explore, Enjoy</h2>
+                <p>Nestled in a beautiful valley in the Swiss Alps, our resort is the perfect escape from the mundane. Dining options include an Italian restaurant, and ski-in bars on mountainside terraces. Other amenities consist of an upscale spa, hot tubs, a gym and a climbing wall. Breakfast is available.</p>
+            </section>
+            <section class="content">
+                <img src="Media/swiss-chalet.jpg" alt="Image of the Swiss-Chalet" onmouseenter="ovrImg(this);" onmouseleave="outImg(this);">
+                <div class="indexWrapper">
+                    <h3>Amenities and Options for Everyone</h3>
+                    <p>Escape from everyday life and spend a few warm and relaxing days in with us. Enjoy the refreshing mountain air. Discover the village and the surrounding mountains on foot or with our bikes. Visit our spa or ski runs during a winter visit, or take a guided hike during the warmer months. We offer something for everyone!</p>
+                </div>
+            </section>
+            <section class="content">
+                <img src="Media/snowy-chalet.jpg" alt="Image of the Snowy-Chalet" onmouseenter="ovrImg(this);" onmouseleave="outImg(this);">
+                <div class="indexWrapper">
+                    <h3>An Escape For Any Time of Year</h3>
+                    <p>Whether you prefer a snowy mountain escape or a peaceful summer getaway surrounded by verdant mountains and valleys, we have it all. You can hit the slopes and build a snowman in the winter, and you can head out for a hike, picnics, and swimming in the spring and summer. Escape the ordinary with us!
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div id="footerWrap"><p>Copyright &copy;2024 - Company Name</p></div>
+        <br>
+        <p style="font-size: x-small;">This site is for educational purposes only</p>
+    </footer>
+</body>
+</html>

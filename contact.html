@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Brandon Cross">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Basilisk</title>
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!--CSS & FAVICON-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Media/favicon.ico" type="image/x-icon">
+
+    <!--Script and Jquery link to easily fade in on page load-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div id="titleWrap"><a href="index.html"><h1>The Basilisk</h1></a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#accom">Accommodations</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="Media/swiss-valley.jpg" alt="Image of the Swiss Valley" class="hero">
+
+        <!--STUFF GOES HERE-->
+        <div id="contactMain">
+            <section id="contactHead">
+                    <h2>Contact Us</h2>
+                    <p>Please reach out to us with any questions or concerns. We are happy to help you plan your dream vacation with us!</p>
+                <img src="Media/swiss-peak.jpg" alt="Image of the Swiss Peak" onmouseenter="ovrImg(this);" onmouseleave="outImg(this);">
+            </section>
+            <form action="#" method="POST" target="_blank">
+                <div class="labelWrapper"><label for="fullname">Full Name:*</label></div>
+                <input type="text" id="fullname" name="fullname" required>
+                <hr>
+    
+                <div class="labelWrapper"><label for="email">Email Address:*</label></div>
+                <input type="email" id="email" name="email" required>
+                <hr>
+    
+                <div class="labelWrapper"><label for="phone">Phone Number:*</label></div>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <div class="preferredContactRadial">
+                    <p id="contactLabel">Which type of contact do you prefer?</p>
+                    <input type="radio" id="preferEmail" name="contactRadio" value="preferEmail" checked>
+                    <label for="preferEmail">Email</label>
+
+
+                    <input type="radio" id="preferPhone" name="contactRadio" value="preferPhone">
+                    <label for="preferPhone">Phone</label>
+                </div>
+    
+                <div class="labelWrapper"><label for="comments">Comments:</label></div>
+                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+    
+                <input type="button" value="Submit">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div id="footerWrap"><p>Copyright &copy;2024 - Company Name</p></div>
+        <br>
+        <p style="font-size: x-small;">This site is for educational purposes only</p>
+    </footer>
+</body>
+</html>
