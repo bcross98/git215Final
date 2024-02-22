@@ -3,7 +3,7 @@ var ovrImg = elem => elem.style.filter = "grayscale(1)";
 //This will restore color on the image(s) when you mouseleave
 var outImg = elem => elem.style.filter = "grayscale(0)";
 
-//Function to make particles
+//Function to make "snow"
 function snowBlower() {
 
     //defines the container where the snow will fall from
@@ -19,7 +19,7 @@ function snowBlower() {
             transform: 'scale(' + (Math.random() * 0.5 + 0.5) + ')'
         });
 
-        //inserts "snow" into the snowBlower div
+        //inserts the new "snow" divs into the snowBlower div
         snowBlower.append(snow);
 
         //animate the snow so that the "snow" fades out as it falls down the page. then this.remove removes them.
@@ -49,4 +49,9 @@ $(document).ready(function() {
     $('footer').fadeIn(500);
 
     snowBlower();
+
+    //add an event listener to dblclick to delete the snowBlower div and stop the snow
+    $(document).dblclick(function(event) {
+        $('#snowBlower').remove();
+    })
 })
