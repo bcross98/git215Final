@@ -50,6 +50,10 @@ $(document).ready(function() {
 
     snowBlower();
 
+    //play wind sound
+    var introSound = new Audio("Media/wind.mp3");
+    introSound.play();
+
     //add an event listener to dblclick to delete the snowBlower div and stop the snow
     $(document).dblclick(function(event) {
         $('#snowBlower').remove();
