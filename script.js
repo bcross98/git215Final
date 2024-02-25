@@ -1,4 +1,4 @@
-//This is a really "quick and dirty" way to grayscale images, I learned this from a professor I had at another college when I was still dabbling in the idea of pursuing a degree in the CS field.
+//This is a really quick and easy way to grayscale images, I learned this from a professor I had at another college when I was still dabbling in the idea of pursuing a degree in the CS field.
 var ovrImg = elem => elem.style.filter = "grayscale(1)";
 var outImg = elem => elem.style.filter = "grayscale(0)";
 
@@ -18,6 +18,16 @@ function makeSnowBlowerDiv() {
 }
 
 //This function creates the "snow". I start with assigning a variable "snowBlower" to a div with the id of snowBlower (created in the function above). Then in the function "createSnow" I assigned a variable named "snow" a new div with the class of "snow". I use the .css function to alter the properties of the "snow". Top is 0 because I want it to start at the top of the page. Left is math.random() which generates a number between 0-1, multiplied by the width of the window to make the "snow" spread the width of the window at random intervals. Opacity is math.random, which is any number between 0-1 (opaque or not). Transform uses the scale property to change the size of the "snow", I'm using math.random() here too, but I set the scale to be between 0-0.5 with the "* 5" and add another 0.5 to it, bringing the scale to between 0.5-1. I use the append function to add it to the snowBlower variable I defined earlier, then I animate it. The animate function is what makes the "snow" look like it's falling, I defined the top and left here to set the endpoint of the snow (with more math.random()). the final Math.random() is to define the amount of time the snow is visible before it's removed by $(this).remove. To finish the whole function I set the snow to fall at an interval of every 100ms.
+//
+//The .snow css styling: 
+//.snow {
+//    position: absolute;
+//    background-color: white;
+//    width: 10px;
+//    height: 10px;
+//    border-radius: 50%;
+//}
+
 function snowBlower() {
 
     var snowBlower = $('#snowBlower');
@@ -58,4 +68,4 @@ $(document).ready(function() {
 
     makeSnowBlowerDiv();
 
-})
+});
