@@ -5,7 +5,7 @@ var outImg = elem => elem.style.filter = "grayscale(0)";
 
 //This function creates a div with the id of snowblower. Then it runs the snowBlower function below to create a snow falling effect.
 function makeSnowBlowerDiv() {
-    var blowerDiv = $("<div>").attr("id", "snowBlower")
+    var blowerDiv = $("<div id='snowBlower'></div>");
 
     blowerDiv.appendTo("body");
     
@@ -14,7 +14,9 @@ function makeSnowBlowerDiv() {
 
 //This function removes the snowBlower div, stopping the snow fall
 function removeSnowBlowerDiv() {
-    $('#snowBlower').remove();
+    $('#snowBlower').fadeOut(2000, function(){
+        $('#snowBlower').remove();
+    });
 }
 
 //Function to make "snow"
