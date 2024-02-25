@@ -1,7 +1,21 @@
-//This will grey out the image(s) when you mouseover
+//This will grey out the image(s) when you mouseover.
 var ovrImg = elem => elem.style.filter = "grayscale(1)";
 //This will restore color on the image(s) when you mouseleave
 var outImg = elem => elem.style.filter = "grayscale(0)";
+
+//This function creates a div with the id of snowblower. Then it runs the snowBlower function below to create a snow falling effect.
+function makeSnowBlowerDiv() {
+    var blowerDiv = $("<div>").attr("id", "snowBlower")
+
+    blowerDiv.appendTo("body");
+    
+    snowBlower();
+}
+
+//This function removes the snowBlower div, stopping the snow fall
+function removeSnowBlowerDiv() {
+    $('#snowBlower').remove();
+}
 
 //Function to make "snow"
 function snowBlower() {
@@ -36,6 +50,7 @@ function snowBlower() {
     setInterval(createSnow, 100);
 }
 
+//this function runs on page load.
 $(document).ready(function() {
     //.fadeIn will fade the element in from display:none
     //.css will set the element to a grid
@@ -48,14 +63,4 @@ $(document).ready(function() {
 
     $('footer').fadeIn(500);
 
-    snowBlower();
-
-    //play wind sound
-    var introSound = new Audio("Media/wind.mp3");
-    introSound.play();
-
-    //add an event listener to dblclick to delete the snowBlower div and stop the snow
-    $(document).dblclick(function(event) {
-        $('#snowBlower').remove();
-    })
 })
